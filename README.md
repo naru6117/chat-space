@@ -1,55 +1,24 @@
-# データベース設計
+# README
 
-## usersテーブル
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-| Column     | Type         | Options     |
-| ---------- | ------------ | ----------- |
-| id         | integer      | null: false |
-| name       | varchar(255) | null: false |
-| email      | string       | null: false |
-| password   | string       | null: false |
-| created_at | daytime      | null: false |
-| update_at  | daytime      | null: false |
+Things you may want to cover:
 
-### Association
-- has_many :groups
-- has_many :messages
+* Ruby version
 
+* System dependencies
 
-## groupsテーブル
+* Configuration
 
-| Column     | Type         | Options     |
-| ---------- | ------------ | ----------- |
-| id         | integer      | null: false |
-| name       | varchar(255) | null: false |
-| created_at | daytime      | null: false |
-| update_at  | daytime      | null: false |
+* Database creation
 
+* Database initialization
 
-## messagesテーブル
+* How to run the test suite
 
-| Column     | Type      | Options                         |
-| ---------- | --------- | ------------------------------- |
-| id         | integer   | null: false                     |
-| body       | text      | null: false                     |
-| image      | text      |                                 |
-| user_id    | integer   | null: false, foreign_key: true  |
-| group_id   | integer   | null: false , foreign_key: true |
-| created_at | daytime   | null: false                     |
-| update_at  | daytime   | null: false                     |
+* Services (job queues, cache servers, search engines, etc.)
 
-### Association
-- belongs_to :user
-- belongs_to :group
-- 
+* Deployment instructions
 
-## membersテーブル
-
-| Column   | Type    | Options                        |
-| -------- | ------- | ------------------------------ |
-| user_id  | integer | null: false, foreign_key: true |
-| group_id | integer | null: false, foreign_key: true |
-
-### Association
-- belongs_to :group
-- belongs_to :user
+* ...
