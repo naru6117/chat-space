@@ -1,24 +1,55 @@
-# README
+# データベース設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column     | Type         | Options     |
+| ---------- | ------------ | ----------- |
+| id         | integer      | null: false |
+| name       | varchar(255) | null: false |
+| email      | string       | null: false |
+| password   | string       | null: false |
+| created_at | daytime      | null: false |
+| update_at  | daytime      | null: false |
 
-* Ruby version
+### Association
+- has_many :groups
+- has_many :messages
 
-* System dependencies
 
-* Configuration
+## groupsテーブル
 
-* Database creation
+| Column     | Type         | Options     |
+| ---------- | ------------ | ----------- |
+| id         | integer      | null: false |
+| name       | varchar(255) | null: false |
+| created_at | daytime      | null: false |
+| update_at  | daytime      | null: false |
 
-* Database initialization
 
-* How to run the test suite
+## messagesテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column     | Type      | Options                         |
+| ---------- | --------- | ------------------------------- |
+| id         | integer   | null: false                     |
+| body       | text      | null: false                     |
+| image      | text      |                                 |
+| user_id    | integer   | null: false, foreign_key: true  |
+| group_id   | integer   | null: false , foreign_key: true |
+| created_at | daytime   | null: false                     |
+| update_at  | daytime   | null: false                     |
 
-* Deployment instructions
+### Association
+- belongs_to :user
+- belongs_to :group
+- 
 
-* ...
+## membersテーブル
+
+| Column   | Type    | Options                        |
+| -------- | ------- | ------------------------------ |
+| user_id  | integer | null: false, foreign_key: true |
+| group_id | integer | null: false, foreign_key: true |
+
+### Association
+- belongs_to :group
+- belongs_to :user
