@@ -5,10 +5,6 @@
 | Column     | Type    | Options     |
 | ---------- | ------- | ----------- |
 | name       | string  | null: false |
-| email      | string  | null: false |
-| password   | string  | null: false |
-| created_at | daytime | null: false |
-| update_at  | daytime | null: false |
 
 ### Association
 - has_many :groups
