@@ -2,9 +2,9 @@
 
 ## usersテーブル
 
-| Column     | Type    | Options     |
-| ---------- | ------- | ----------- |
-| name       | string  | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
 - has_many :groups
@@ -13,11 +13,11 @@
 
 ## groupsテーブル
 
-| Column     | Type         | Options     |
-| ---------- | ------------ | ----------- |
-| name       | varchar(255) | null: false |
-| created_at | daytime      | null: false |
-| update_at  | daytime      | null: false |
+| Column     | Type    | Options     |
+| ---------- | ------- | ----------- |
+| name       | string  | null: false |
+| created_at | daytime | null: false |
+| update_at  | daytime | null: false |
 
 
 ## messagesテーブル
