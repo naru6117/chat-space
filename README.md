@@ -16,9 +16,6 @@
 | Column     | Type    | Options     |
 | ---------- | ------- | ----------- |
 | name       | string  | null: false |
-| created_at | daytime | null: false |
-| update_at  | daytime | null: false |
-
 
 ## messagesテーブル
 
