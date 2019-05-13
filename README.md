@@ -2,13 +2,13 @@
 
 ## usersテーブル
 
-| Column     | Type         | Options     |
-| ---------- | ------------ | ----------- |
-| name       | varchar(255) | null: false |
-| email      | string       | null: false |
-| password   | string       | null: false |
-| created_at | daytime      | null: false |
-| update_at  | daytime      | null: false |
+| Column     | Type    | Options     |
+| ---------- | ------- | ----------- |
+| name       | string  | null: false |
+| email      | string  | null: false |
+| password   | string  | null: false |
+| created_at | daytime | null: false |
+| update_at  | daytime | null: false |
 
 ### Association
 - has_many :groups
@@ -27,15 +27,15 @@
 
 ## messagesテーブル
 
-| Column     | Type      | Options                         |
-| ---------- | --------- | ------------------------------- |
-| id         | integer   | null: false                     |
-| body       | text      | null: false                     |
-| image      | text      |                                 |
-| user_id    | integer   | null: false, foreign_key: true  |
-| group_id   | integer   | null: false , foreign_key: true |
-| created_at | daytime   | null: false                     |
-| update_at  | daytime   | null: false                     |
+| Column     | Type    | Options                         |
+| ---------- | ------- | ------------------------------- |
+| id         | integer | null: false                     |
+| body       | text    | null: false                     |
+| image      | text    |                                 |
+| user_id    | integer | null: false, foreign_key: true  |
+| group_id   | integer | null: false , foreign_key: true |
+| created_at | daytime | null: false                     |
+| update_at  | daytime | null: false                     |
 
 ### Association
 - belongs_to :user
