@@ -4,7 +4,6 @@
 
 | Column     | Type         | Options     |
 | ---------- | ------------ | ----------- |
-| id         | integer      | null: false |
 | name       | varchar(255) | null: false |
 | email      | string       | null: false |
 | password   | string       | null: false |
