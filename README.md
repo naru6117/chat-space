@@ -15,7 +15,6 @@
 
 | Column     | Type         | Options     |
 | ---------- | ------------ | ----------- |
-| id         | integer      | null: false |
 | name       | varchar(255) | null: false |
 | created_at | daytime      | null: false |
 | update_at  | daytime      | null: false |
