@@ -21,7 +21,6 @@
 
 | Column     | Type    | Options                         |
 | ---------- | ------- | ------------------------------- |
-| id         | integer | null: false                     |
 | body       | text    | null: false                     |
 | image      | text    |                                 |
 | user_id    | integer | null: false, foreign_key: true  |
