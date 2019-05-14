@@ -27,12 +27,12 @@
 
 ## messagesテーブル
 
-| Column     | Type       | Options                         |
-| ---------- | ---------- | ------------------------------- |
-| body       | text       |                                 |
-| image      | text       |                                 |
-| user_id    | references | null: false, foreign_key: true  |
-| group_id   | references | null: false , foreign_key: true |
+| Column   | Type       | Options                         |
+| -------- | ---------- | ------------------------------- |
+| body     | text       |                                 |
+| image    | string     |                                 |
+| user_id  | references | null: false, foreign_key: true  |
+| group_id | references | null: false , foreign_key: true |
 
 ### Association
 - belongs_to :user
