@@ -25,8 +25,6 @@
 | image      | text       |                                 |
 | user_id    | references | null: false, foreign_key: true  |
 | group_id   | references | null: false , foreign_key: true |
-| created_at | daytime    | null: false                     |
-| update_at  | daytime    | null: false                     |
 
 ### Association
 - belongs_to :user
