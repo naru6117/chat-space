@@ -13,20 +13,20 @@
 
 ## groupsテーブル
 
-| Column     | Type    | Options     |
-| ---------- | ------- | ----------- |
-| name       | string  | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ## messagesテーブル
 
-| Column     | Type    | Options                         |
-| ---------- | ------- | ------------------------------- |
-| body       | text    |                     |
-| image      | text    |                                 |
-| user_id    | integer | null: false, foreign_key: true  |
-| group_id   | integer | null: false , foreign_key: true |
-| created_at | daytime | null: false                     |
-| update_at  | daytime | null: false                     |
+| Column     | Type       | Options                         |
+| ---------- | ---------- | ------------------------------- |
+| body       | text       |                                 |
+| image      | text       |                                 |
+| user_id    | references | null: false, foreign_key: true  |
+| group_id   | references | null: false , foreign_key: true |
+| created_at | daytime    | null: false                     |
+| update_at  | daytime    | null: false                     |
 
 ### Association
 - belongs_to :user
