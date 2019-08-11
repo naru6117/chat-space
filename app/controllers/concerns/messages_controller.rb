@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessagesController < ApplicationController
   before_action :set_group
 
@@ -9,9 +11,14 @@ class MessagesController < ApplicationController
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-      respond_to do |foromat|
-        format.html { redirect_to :root}
-        format.json{ render json: @messages}
+      respond_to do |format|
+        format.html { redirect_to :root }
+        format.json do
+          render json: { username: current_user.name,
+                         message: @message.content,
+                         image: @message.image,
+                         created_at: @message.created_at.strftime('%Y/%m/%d %H:%M') }
+        end
       end
     else
       @messages = @group.messages.includes(:user)
